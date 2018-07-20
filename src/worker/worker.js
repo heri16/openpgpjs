@@ -30,8 +30,11 @@
 
 self.window = self; // to make UMD bundles work
 
-importScripts('openpgp.js');
-var openpgp = window.openpgp;
+// importScripts('openpgp.js');
+// var openpgp = window.openpgp;
+
+var openpgp = require('openpgp/dist/openpgp.min');
+module.exports = openpgp;
 
 var randomQueue = [];
 var MAX_SIZE_RANDOM_BUFFER = 60000;
